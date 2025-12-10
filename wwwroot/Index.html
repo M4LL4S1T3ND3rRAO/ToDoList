@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>To-Do List — Pure HTML/CSS/JS</title>
+    <link href="CSS.css" rel="stylesheet" />
+</head>
+<body>
+    <main class="app" id="app" aria-live="polite">
+        <header>
+            <div class="logo">TD</div>
+            <div>
+                <h1>My To-Do List</h1>
+                <p class="lead">Add tasks, mark them done, edit or remove. Data saved locally.</p>
+            </div>
+        </header>
+
+        <section class="controls">
+            <div class="input-wrap">
+                <input id="newTask" type="text" placeholder="Add a task…" />
+                <button id="addBtn" class="btn">Add</button>
+            </div>
+
+            <div style="display:flex;gap:8px">
+                <button id="clearCompleted" class="ghost">Clear completed</button>
+                <button id="clearAll" class="ghost">Clear all</button>
+            </div>
+        </section>
+
+        <section class="list" id="taskList"></section>
+
+        <footer class="app-footer">
+            <div id="count">0 tasks</div>
+            <div class="filters">
+                <span id="allBtn" class="ghost">All</span>
+                <span id="activeBtn" class="ghost">Active</span>
+                <span id="completedBtn" class="ghost">Completed</span>
+            </div>
+        </footer>
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="JS.js"></script>
+</body>
+</html>
